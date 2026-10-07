@@ -1,0 +1,8 @@
+{
+  "name": "dwayne-rubite-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dwayne D. Rubite's personal portfolio in HTML, CSS, and JavaScript",
+  "scripts": { "start": "node server.js", "check": "node scripts/check.js", "test": "node --test" }
+}
