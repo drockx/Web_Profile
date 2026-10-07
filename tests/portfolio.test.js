@@ -7,11 +7,13 @@ const groups = [
   { id: 1, category: 'languages', title: 'Programming languages', skills: [{ id: 1, label: 'Java' }, { id: 2, label: 'JavaScript' }, { id: 3, label: 'SQL' }] },
   { id: 2, category: 'data', title: 'Database management', skills: [{ id: 4, label: 'MySQL' }, { id: 5, label: 'SQL Server' }] },
 ];
-test('project category selection preserves team attribution and excludes other categories', () => {
-  const selected = filterProjects(Object.values(projects), 'systems');
-  assert.deepEqual(selected.map(p => p.id), ['sparxg']);
-  assert.match(selected[0].label, /CO-DEVELOPER/);
-  assert.equal(filterProjects(Object.values(projects)).length, 2);
+test('project category selection works for current content and future additions', () => {
+  const selected = filterProjects(Object.values(projects), 'mobile');
+  assert.deepEqual(selected.map(p => p.id), ['animarket']);
+  assert.match(selected[0].label, /MOBILE DEVELOPER/);
+  assert.equal(filterProjects(Object.values(projects)).length, 1);
+  const extended = [...Object.values(projects), { id: 'future-system', category: 'systems' }];
+  assert.deepEqual(filterProjects(extended, 'systems').map(p => p.id), ['future-system']);
   assert.deepEqual(filterProjects(Object.values(projects), 'unknown'), []);
 });
 test('skill search combines category and query rather than overriding either', () => {

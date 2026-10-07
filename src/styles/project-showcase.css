@@ -1,0 +1,26 @@
+/* A focused layout for the current featured project. */
+.project-grid { grid-template-columns: 1fr; margin-top: 40px; }
+.project-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
+.project-art { height: 395px; }
+.animarket-art { display: grid; place-items: center; background: #c8c6a8; }
+.animarket-logo { width: 355px; height: 355px; object-fit: contain; }
+.project-info { padding: 0; }
+.project-info h3 { font-size: 42px; }
+.project-info p { font-size: 14px; line-height: 1.9; margin-top: 16px; }
+.project-detail { font-size: 12px; margin-top: 25px; }
+@media (max-width: 1000px) {
+  .project-card { gap: 30px; }
+  .project-art { height: 325px; }
+  .animarket-logo { width: 285px; height: 285px; }
+  .project-info h3 { font-size: 35px; }
+  .project-info p { font-size: 12px; }
+}
+@media (max-width: 700px) {
+  .project-card { grid-template-columns: 1fr; gap: 24px; }
+  .project-art { height: 355px; }
+  .animarket-logo { width: 320px; height: 320px; }
+}
+@media (max-width: 370px) {
+  .project-art { height: 285px; }
+  .animarket-logo { width: 255px; height: 255px; }
+}

@@ -2,5 +2,7 @@
 @import url("./src/styles/tokens.css");
 @import url("./src/styles/base.css");
 @import url("./src/styles/portfolio.css");
+@import url("./src/styles/project-showcase.css");
 @import url("./src/styles/responsive.css");
+@import url("./src/styles/certificate.css");
 @import url("./src/styles/print.css");
