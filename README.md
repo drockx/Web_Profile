@@ -42,4 +42,8 @@ Pinterest's full previews were inaccessible; only indexed titles/descriptions in
 
 ## Hosting
 
-This folder is a static site. Deploy `index.html`, `styles.css`, `script.js`, `src/`, and `assets/` together. Do not publish `tmp/`. The included CV contains the original personal/contact information and project history; review it before public deployment. No site has been published as part of this local implementation.
+Run `npm run build` to package `index.html`, `styles.css`, `script.js`, `src/`, and `assets/` into `dist/`. Publish the contents of `dist/` through a static host. The generated folder excludes the local preview server, tests, and development files.
+
+For Vercel, import `drockx/Web_Profile` with the repository root as the Root Directory. The included `vercel.json` selects **Other**, runs **npm run build**, skips dependency installation, and serves **dist**. These file settings override the equivalent dashboard settings; no environment variables are needed. Push these files to the connected production branch to create a new deployment. `server.js` is only a local preview server and must not be used as the production entry point.
+
+If the deployed URL shows plain `Not found`, check that the latest deployment includes `vercel.json` and has a build log ending with `Static portfolio built in dist/`. Confirm the project is connected to `drockx/Web_Profile` and its Root Directory is the repository root. Open the newly completed deployment after updating settings; an older deployment keeps its previous configuration.

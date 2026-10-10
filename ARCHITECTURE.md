@@ -1,6 +1,6 @@
 # Portfolio architecture
 
-This is a static, browser-rendered application using native ES modules. A feature-based presentation layer sits above a small domain layer. Browser capabilities are adapters injected at the composition root. A backend, framework, database, and build pipeline are unnecessary for the current requirements: portfolio content, local filtering, dialogs, downloads, and an email draft.
+This is a static, browser-rendered application using native ES modules. A feature-based presentation layer sits above a small domain layer. Browser capabilities are adapters injected at the composition root. A backend, framework, or database is unnecessary for the current requirements: portfolio content, local filtering, dialogs, downloads, and an email draft. A dependency-free packaging step copies the browser files into `dist/` for static hosting.
 
 ```mermaid
 flowchart TD
@@ -29,6 +29,7 @@ flowchart TD
 | `src/services/` | Concrete browser capabilities behind small contracts |
 | `src/styles/` | Tokens, base rules, portfolio presentation, responsive rules, and print rules |
 | `server.js` | Local static file delivery, confined to public entry points, `src/`, and `assets/` |
+| `scripts/build.js`, `vercel.json` | Package browser files into `dist/` and configure Vercel to serve that static output |
 | `tests/` | Domain edge cases and adapter substitution using the native Node test runner |
 
 Skills use the accessible static markup as their single content source. The skills controller reads it once into plain records and passes those records to the pure filter. Project details live in `src/data/projects.js`; the static cards are curated summaries linked by `data-project-id`. No JavaScript-generated content is needed to read the main portfolio.
@@ -57,4 +58,4 @@ Run `npm run check` for JavaScript syntax, relative module resolution, and the n
 
 To introduce actual form delivery later, add an adapter exposing `open(draft)` or deliberately revise the delivery contract to `send(inquiry)` and update the user-facing confirmation semantics. The current implementation only opens an email draft and never submits a message or sends data to an API.
 
-Start with `npm start` and visit http://127.0.0.1:4173. ES modules must be served over HTTP; opening the file directly is not the supported interactive preview. For production, publish the entry files, `src/`, and `assets/` through a static host. The development server is bound to localhost and is not a production backend.
+Start with `npm start` and visit http://127.0.0.1:4173. ES modules must be served over HTTP; opening the file directly is not the supported interactive preview. For production, run `npm run build` and publish `dist/` through a static host. Vercel reads these settings from `vercel.json`. The development server is bound to localhost and is not a production backend.

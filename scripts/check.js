@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 async function collect(directory) {
   const files = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
-    if (entry.name.startsWith('.') || ['node_modules', 'tmp'].includes(entry.name)) continue;
+    if (entry.name.startsWith('.') || ['node_modules', 'tmp', 'dist'].includes(entry.name)) continue;
     const file = path.join(directory, entry.name);
     if (entry.isDirectory()) files.push(...await collect(file));
     else if (entry.name.endsWith('.js')) files.push(file);
