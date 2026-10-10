@@ -30,6 +30,12 @@ h1 { font-size: clamp(72px, 7.2vw, 104px); margin-top: 25px; line-height: .97; f
 .hero-intro { max-width: 495px; margin-top: 26px; line-height: 1.85; font-size: 15px; }
 .hero-intro strong { font-weight: 700; color: var(--brown); }
 .hero-actions { display: flex; align-items: center; gap: 29px; margin-top: 28px; }
+.contact-icon { display: block; width: 20px; height: 20px; flex-shrink: 0; }
+.hero-contacts { display: flex; flex-wrap: wrap; gap: 8px 18px; max-width: 510px; margin-top: 23px; }
+.hero-contacts > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 11px; font-weight: 600; }
+.hero-contact-icon { display: grid; place-items: center; width: 32px; height: 32px; background: var(--paper); border: 1px solid #b9ae9b; transition: background .2s, color .2s, border-color .2s; }
+.hero-contact-icon .contact-icon { width: 17px; height: 17px; }
+.hero-contacts > a:hover .hero-contact-icon { color: var(--paper); background: var(--brown); border-color: var(--brown); }
 .button { border: 1px solid var(--brown); border-radius: 0; padding: 14px 22px; min-height: 48px; display: inline-flex; justify-content: space-between; align-items: center; gap: 32px; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; }
 .button:hover { transform: translateY(-2px); }
 .button-dark { color: var(--paper); background: var(--dark-gradient); }
@@ -139,11 +145,18 @@ details p a { text-decoration: underline; text-underline-offset: 3px; color: var
 .contact-copy .eyebrow { font-size: 10px; color: var(--muted); margin-bottom: 25px; }
 .contact-copy h2 { font-size: clamp(46px, 4.8vw, 67px); }
 .contact-copy > p { font-size: 14px; max-width: 430px; margin-top: 25px; }
-.contact-email { display: flex; gap: 12px; align-items: center; margin-top: 25px; }
-.contact-email > a { font-size: 13px; border-bottom: 1px solid var(--accent); overflow-wrap: anywhere; }
-.contact-email > button { flex-shrink: 0; border: 1px solid #a7977e; background: transparent; width: 44px; height: 44px; font-size: 22px; }
-.contact-email > button:hover { background: var(--beige); }
-.contact-links { display: flex; flex-wrap: wrap; gap: 15px; font-size: 12px; color: var(--muted); margin-top: 14px; }
+.contact-methods { display: grid; gap: 10px; margin-top: 26px; }
+.contact-method { display: flex; align-items: center; gap: 12px; padding: 13px 15px; border: 1px solid #b9ae9b; background: var(--paper); min-height: 76px; transition: border-color .2s, background .2s; }
+.contact-method:hover { border-color: var(--accent); background: var(--beige); }
+.contact-method-link { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; min-height: 44px; }
+.contact-method-icon { width: 36px; height: 36px; display: grid; place-items: center; color: var(--brown); background: #e9dfcf; flex-shrink: 0; }
+.contact-method-text { min-width: 0; }
+.contact-method-label { display: block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 3px; }
+.contact-method strong { display: block; font-size: 14px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
+.contact-method-arrow { margin-left: auto; font-size: 21px; flex-shrink: 0; color: var(--accent); }
+#copy-email { flex-shrink: 0; display: grid; place-items: center; border: 1px solid #b9ae9b; background: transparent; width: 44px; height: 44px; }
+#copy-email:hover { background: #e9dfcf; border-color: var(--accent); }
+.contact-copy .contact-location { margin-top: 16px; font-size: 12px; }
 .contact-downloads { display: flex; gap: 23px; margin-top: 24px; }
 .contact-downloads .text-link { font-size: 12px; }
 form { padding-top: 5px; }

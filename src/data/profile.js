@@ -2,7 +2,7 @@
 export const profile = Object.freeze({
   name: 'Dwayne D. Rubite',
   greetingName: 'Dwayne',
-  email: 'd.rubite.143014.tc@umindanao.edu.ph',
+  email: 'dwaynerubite8@gmail.com',
   navigationSections: ['home', 'about', 'work', 'skills', 'journey', 'contact'],
   mobileBreakpoint: '(max-width: 900px)',
 });

@@ -46,8 +46,8 @@
   .skill-search input { width: 100%; }
   .contact-layout { grid-template-columns: 1fr 1fr; gap: 32px; }
   .contact-copy h2 { font-size: 49px; }
-  .contact-email { gap: 8px; }
-  .contact-email > a { font-size: 12px; }
+  .contact-method { padding-inline: 12px; }
+  .contact-method strong { font-size: 13px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 @media (max-width: 700px) {
@@ -109,9 +109,8 @@
   .contact-layout { grid-template-columns: 1fr; gap: 36px; }
   .contact-copy h2 { font-size: clamp(43px, 10vw, 59px); }
   .contact-copy > p { font-size: 14px; }
-  .contact-email { gap: 10px; }
-  .contact-email > a { font-size: 12px; }
-  .contact-links { font-size: 12px; }
+  .hero-contacts { gap: 6px 15px; margin-top: 20px; }
+  .contact-method strong { font-size: 14px; }
   .form-row { grid-template-columns: 1fr 1fr; gap: 18px; }
   form label { font-size: 12px; }
   form input, form select, form textarea { font-size: 16px; }
@@ -135,7 +134,8 @@
   .button { gap: 24px; padding-inline: 18px; }
   .portrait-frame { height: 342px; }
   .about-facts { grid-template-columns: 1fr; }
-  .contact-email > a { font-size: 11px; }
+  .hero-contacts { gap: 5px 12px; }
+  .contact-method strong { font-size: 13px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .hero-bottom a { font-size: 9px; }
 }

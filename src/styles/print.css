@@ -9,6 +9,9 @@
   .hero { padding-top: 0; gap: 40px; grid-template-columns: 1.2fr .8fr; }
   .hero-visual { width: 180px; margin: 0 auto; padding: 0; }
   .hero-visual::before, .portrait-index, .visual-label, .portrait-caption { display: none; }
+  #copy-email { display: none; }
+  .contact-methods { gap: 5px; }
+  .contact-method { min-height: 56px; padding-block: 8px; }
   .portrait-frame { height: 220px; }
   .work-section, .credential-section, .approach-section, .contact-section { background: white; color: var(--deep); }
   .credential-layout p, .credential-meta, .credential-meta span b { color: var(--brown); }
