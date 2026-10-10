@@ -8,6 +8,9 @@
   --muted: #70665b;
   --line: #d9d2c4;
   --accent: #866442;
+  --espresso: #241e19;
+  --bronze: #a07749;
+  --dark-gradient: linear-gradient(115deg, var(--brown), var(--espresso));
   --display: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
   --sans: 'DM Sans', Arial, sans-serif;
 }

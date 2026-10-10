@@ -16,7 +16,7 @@
 .project-detail { font-size: 12px; margin-top: 21px; }
 .project-actions { display: flex; flex-wrap: wrap; gap: 12px 27px; margin-top: 21px; }
 .project-actions .text-link { margin-top: 0; }
-.drmc-art { background-color: var(--deep); color: var(--paper); border-color: var(--brown); padding: 62px 30px 32px; background-image: linear-gradient(#b9b48e0b 1px, transparent 1px), linear-gradient(90deg, #b9b48e0b 1px, transparent 1px); background-size: 32px 32px; }
+.drmc-art { background-color: var(--deep); color: var(--paper); border-color: var(--brown); padding: 62px 30px 32px; background-image: linear-gradient(#b9b48e0b 1px, transparent 1px), linear-gradient(90deg, #b9b48e0b 1px, transparent 1px), radial-gradient(ellipse at 100% 0, #a077493d, transparent 70%), linear-gradient(135deg, var(--deep), var(--espresso)); background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%; }
 .drmc-art .art-label, .drmc-art .illustration-label { color: #ded2bd; }
 .portal-identity { display: flex; align-items: center; gap: 11px; font-size: 8px; font-weight: 600; letter-spacing: 1px; line-height: 1.6; color: #ded2bd; }
 .portal-mark { display: grid; place-items: center; border: 1px solid #b9b48e66; background: #b9b48e12; width: 36px; height: 36px; font-size: 29px; line-height: 1; color: var(--burlywood); }

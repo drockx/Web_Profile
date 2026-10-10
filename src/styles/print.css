@@ -4,6 +4,7 @@
   .container { width: 100%; }
   .section { padding-block: 25px; }
   h1 { font-size: 46px; }
+  .hero h1 em { background: none; color: var(--accent); }
   h2 { font-size: 30px; }
   .hero { padding-top: 0; gap: 40px; grid-template-columns: 1.2fr .8fr; }
   .hero-visual { width: 180px; margin: 0 auto; padding: 0; }

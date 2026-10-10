@@ -17,19 +17,22 @@ nav { display: flex; align-items: center; gap: 27px; font-size: 12px; font-weigh
 nav a { position: relative; padding: 9px 0; }
 nav a:not(.nav-contact)::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 3px; background: var(--brown); height: 2px; transition: right .2s; }
 nav a:hover::after, nav a[aria-current]::after { right: 0; }
-nav .nav-contact { border: 1px solid var(--brown); padding: 11px 18px; display: flex; gap: 22px; margin-left: 8px; background: var(--brown); color: var(--paper); }
+nav .nav-contact { border: 1px solid var(--brown); padding: 11px 18px; display: flex; gap: 22px; margin-left: 8px; background: var(--dark-gradient); color: var(--paper); }
 .nav-contact:hover { background: var(--deep); }
 .menu-toggle { display: none; }
 .hero { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; column-gap: 72px; padding-top: 64px; }
 .hero .eyebrow { display: flex; align-items: center; gap: 11px; font-size: 10px; letter-spacing: 1.5px; }
 .small-star { width: 9px; height: 9px; background: var(--accent); flex-shrink: 0; }
 h1 { font-size: clamp(72px, 7.2vw, 104px); margin-top: 25px; line-height: .97; font-weight: 700; letter-spacing: -.018em; }
+@supports (background-clip: text) {
+  .hero h1 em { background: linear-gradient(110deg, #79593b, var(--bronze) 55%, var(--brown)); background-clip: text; color: transparent; }
+}
 .hero-intro { max-width: 495px; margin-top: 26px; line-height: 1.85; font-size: 15px; }
 .hero-intro strong { font-weight: 700; color: var(--brown); }
 .hero-actions { display: flex; align-items: center; gap: 29px; margin-top: 28px; }
 .button { border: 1px solid var(--brown); border-radius: 0; padding: 14px 22px; min-height: 48px; display: inline-flex; justify-content: space-between; align-items: center; gap: 32px; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; }
 .button:hover { transform: translateY(-2px); }
-.button-dark { color: var(--paper); background: var(--brown); }
+.button-dark { color: var(--paper); background: var(--dark-gradient); }
 .button-dark:hover { background: var(--deep); }
 .button span { font-size: 20px; line-height: 1; }
 .text-link { font-size: 12px; display: inline-flex; align-items: center; gap: 18px; border: 0; border-bottom: 1px solid var(--accent); padding: 8px 0; background: none; line-height: 1.8; font-weight: 700; min-height: 44px; }
@@ -38,13 +41,13 @@ h1 { font-size: clamp(72px, 7.2vw, 104px); margin-top: 25px; line-height: .97; f
 .hero-note { display: flex; gap: 9px; align-items: center; font-size: 11px; color: var(--muted); margin-top: 20px; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brown); box-shadow: 0 0 0 3px #b9b48e66; }
 .hero-visual { position: relative; padding-top: 29px; margin-right: 14px; align-self: start; }
-.hero-visual::before { content: ''; position: absolute; left: 22px; right: -16px; top: 51px; bottom: -16px; background: var(--khaki); }
+.hero-visual::before { content: ''; position: absolute; left: 22px; right: -16px; top: 51px; bottom: -16px; background: linear-gradient(150deg, var(--khaki), var(--burlywood)); }
 .visual-label { position: absolute; top: 0; left: 0; font-size: 9px; letter-spacing: 1.4px; color: var(--muted); }
 .portrait-frame { position: relative; border: 1px solid var(--brown); height: 448px; padding: 8px; background: var(--beige); overflow: hidden; }
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .portrait-index { position: absolute; top: 43px; right: 22px; width: 70px; padding: 9px 10px; background: var(--deep); color: var(--paper); font-family: var(--display); font-size: 31px; line-height: 1; font-weight: 700; }
 .portrait-index span { display: block; margin-top: 7px; font-family: var(--sans); font-size: 6px; letter-spacing: .7px; line-height: 1.3; }
-.portrait-caption { position: relative; background: var(--brown); color: var(--paper); display: flex; align-items: center; gap: 16px; padding: 17px 22px; z-index: 2; }
+.portrait-caption { position: relative; background: var(--dark-gradient); color: var(--paper); display: flex; align-items: center; gap: 16px; padding: 17px 22px; z-index: 2; }
 .caption-icon { font-family: var(--display); font-size: 29px; font-weight: 600; color: var(--burlywood); line-height: 1; }
 .portrait-caption strong { font-weight: 600; font-size: 13px; display: block; }
 .portrait-caption div > span { display: block; font-size: 9px; color: #ded2bd; margin-top: 2px; letter-spacing: 1px; }
@@ -52,7 +55,7 @@ h1 { font-size: clamp(72px, 7.2vw, 104px); margin-top: 25px; line-height: .97; f
 .hero-bottom { grid-column: 1 / -1; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; margin-top: 48px; padding: 22px 0; font-size: 9px; color: var(--muted); letter-spacing: 1.2px; gap: 20px; }
 .hero-bottom a { font-size: 11px; letter-spacing: .2px; padding: 5px 0; }
 .hero-bottom a span { margin-left: 15px; font-size: 16px; }
-.expertise-ribbon { background: var(--brown); color: var(--paper); border-block: 1px solid var(--brown); }
+.expertise-ribbon { background: linear-gradient(100deg, var(--espresso), var(--brown) 65%, var(--deep)); color: var(--paper); border-block: 1px solid var(--brown); }
 .expertise-ribbon .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 19px 0; font-family: var(--display); font-weight: 600; font-size: 23px; letter-spacing: .5px; text-transform: uppercase; }
 .expertise-ribbon span:nth-child(even) { font-family: var(--sans); font-weight: 400; font-size: 20px; color: var(--burlywood); }
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
@@ -91,7 +94,7 @@ h1 { font-size: clamp(72px, 7.2vw, 104px); margin-top: 25px; line-height: .97; f
 .skill-items { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
 .skill-items > span { background: var(--beige); border: 1px solid var(--line); font-size: 12px; font-weight: 500; padding: 7px 12px; }
 .skill-result { font-size: 11px; color: var(--muted); margin-top: 18px; }
-.credential-section { background: var(--brown); color: var(--beige); padding: 58px 0; }
+.credential-section { background: var(--dark-gradient); color: var(--beige); padding: 58px 0; }
 .credential-layout .eyebrow { font-size: 10px; color: #ded2bd; margin-bottom: 17px; }
 .credential-layout h2 { font-size: clamp(38px, 4vw, 56px); }
 .credential-layout h2 em { color: var(--burlywood); }

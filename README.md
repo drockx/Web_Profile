@@ -30,7 +30,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the dependency diagram, SOLID mapping
 
 ## Design references
 
-The information structure takes inspiration from [Aljun Cursiga's developer portfolio](https://aljun-cursiga-portfolio.vercel.app/), inspected in the browser. The current design retains the beige, burlywood, deep brown, and muted khaki palette while using bold Barlow Condensed headings, DM Sans body text, angular framing, and stronger borders. The supplied visual reference informed the sharper typography and structured layout; supplied project branding remains in the showcase.
+The information structure takes inspiration from [Aljun Cursiga's developer portfolio](https://aljun-cursiga-portfolio.vercel.app/), inspected in the browser. The current design retains the beige, burlywood, deep brown, and muted khaki palette, with restrained bronze and espresso gradients approved by the user. Bold Barlow Condensed headings, DM Sans body text, angular framing, and stronger borders follow the supplied visual reference. Supplied project branding remains in the showcase.
 
 Pinterest directions researched before implementation:
 
