@@ -1,26 +1,51 @@
-/* A focused layout for the current featured project. */
-.project-grid { grid-template-columns: 1fr; margin-top: 40px; }
-.project-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
-.project-art { height: 395px; }
+/* Two project showcases: supplied branding and a clearly labeled portal overview. */
+.project-grid { display: grid; grid-template-columns: 1fr; margin-top: 46px; gap: 45px; }
+.project-card { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; padding-bottom: 45px; border-bottom: 1px solid #cbbfae; }
+.project-card:nth-child(even) .project-art { order: 2; }
+.project-card:nth-child(even) .project-info { order: 1; }
+.project-art { height: 370px; position: relative; overflow: hidden; border: 1px solid #aea687; }
+.art-label { position: absolute; top: 18px; left: 23px; font-size: 9px; letter-spacing: 1.5px; z-index: 2; }
+.illustration-label { position: absolute; bottom: 15px; right: 21px; font-size: 8px; letter-spacing: 1px; }
 .animarket-art { display: grid; place-items: center; background: #c8c6a8; }
-.animarket-logo { width: 355px; height: 355px; object-fit: contain; }
-.project-info { padding: 0; }
-.project-info h3 { font-size: 42px; }
-.project-info p { font-size: 14px; line-height: 1.9; margin-top: 16px; }
-.project-detail { font-size: 12px; margin-top: 25px; }
+.animarket-logo { width: 305px; height: 305px; object-fit: contain; }
+.project-info { padding: 0; min-width: 0; }
+.project-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 16px; font-size: 9px; font-weight: 700; color: var(--muted); letter-spacing: .7px; margin-bottom: 17px; }
+.project-info h3 { font-family: var(--display); font-size: 44px; display: flex; justify-content: space-between; align-items: start; gap: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.05; }
+.project-info h3 > span { font-family: var(--sans); font-size: 24px; font-weight: 400; }
+.project-info p { font-size: 14px; line-height: 1.85; margin-top: 19px; }
+.project-detail { font-size: 12px; margin-top: 21px; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 12px 27px; margin-top: 21px; }
+.project-actions .text-link { margin-top: 0; }
+.drmc-art { background-color: var(--deep); color: var(--paper); border-color: var(--brown); padding: 62px 30px 32px; background-image: linear-gradient(#b9b48e0b 1px, transparent 1px), linear-gradient(90deg, #b9b48e0b 1px, transparent 1px); background-size: 32px 32px; }
+.drmc-art .art-label, .drmc-art .illustration-label { color: #ded2bd; }
+.portal-identity { display: flex; align-items: center; gap: 11px; font-size: 8px; font-weight: 600; letter-spacing: 1px; line-height: 1.6; color: #ded2bd; }
+.portal-mark { display: grid; place-items: center; border: 1px solid #b9b48e66; background: #b9b48e12; width: 36px; height: 36px; font-size: 29px; line-height: 1; color: var(--burlywood); }
+.portal-title { font-family: var(--display); font-size: 78px; font-weight: 600; line-height: .9; margin-top: 16px; letter-spacing: 1px; color: var(--burlywood); }
+.portal-title > span { display: block; font-size: 21px; letter-spacing: 3px; color: var(--paper); margin-top: 8px; }
+.portal-workflows { display: grid; margin-top: 20px; border-top: 1px solid #b9b48e40; }
+.portal-workflows > span { display: flex; align-items: center; gap: 13px; font-size: 10px; padding: 8px 0; border-bottom: 1px solid #b9b48e40; color: #ded2bd; }
+.portal-workflows b { font-size: 8px; font-weight: 500; color: var(--burlywood); }
+.portal-workflows i { margin-left: auto; font-style: normal; color: var(--burlywood); }
 @media (max-width: 1000px) {
-  .project-card { gap: 30px; }
-  .project-art { height: 325px; }
-  .animarket-logo { width: 285px; height: 285px; }
-  .project-info h3 { font-size: 35px; }
-  .project-info p { font-size: 12px; }
+  .project-card { gap: 32px; }
+  .project-art { height: 350px; }
+  .animarket-logo { width: 280px; height: 280px; }
+  .project-info h3 { font-size: 38px; }
+  .drmc-art { padding-inline: 25px; padding-top: 51px; }
 }
 @media (max-width: 700px) {
-  .project-card { grid-template-columns: 1fr; gap: 24px; }
-  .project-art { height: 355px; }
-  .animarket-logo { width: 320px; height: 320px; }
+  .project-grid { margin-top: 32px; gap: 32px; }
+  .project-card { grid-template-columns: 1fr; gap: 24px; padding-bottom: 32px; }
+  .project-card:nth-child(even) .project-art, .project-card:nth-child(even) .project-info { order: initial; }
+  .project-art { height: 345px; }
+  .animarket-logo { width: 280px; height: 280px; }
+  .project-info h3 { font-size: 39px; }
+  .project-meta { font-size: 9px; }
 }
 @media (max-width: 370px) {
-  .project-art { height: 285px; }
-  .animarket-logo { width: 255px; height: 255px; }
+  .project-art { height: 315px; }
+  .animarket-logo { width: 250px; height: 250px; }
+  .drmc-art { padding-top: 49px; padding-inline: 23px; }
+  .portal-title { font-size: 66px; }
+  .portal-workflows { margin-top: 15px; }
 }

@@ -4,5 +4,5 @@ export const profile = Object.freeze({
   greetingName: 'Dwayne',
   email: 'd.rubite.143014.tc@umindanao.edu.ph',
   navigationSections: ['home', 'about', 'work', 'skills', 'journey', 'contact'],
-  mobileBreakpoint: '(max-width: 800px)',
+  mobileBreakpoint: '(max-width: 900px)',
 });

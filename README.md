@@ -8,7 +8,11 @@ Run `npm start` and visit http://127.0.0.1:4173. The site uses native ES modules
 
 ## Content
 
-The profile, qualifications, education, contact details, and project contributions come from `Rubite_Dwayne_CV.pdf`. The portrait is the user-supplied `Digoy` PNG, stored as `assets/dwayne-portrait.png`. The AniMarket showcase uses the supplied `assets/animarket-logo.png`. The credentials section displays the supplied `assets/database-certificate.png`, with a full-size link. The certificate's verification code is not manually transcribed from the low-resolution image; view the document for its details. The original PDF is included as a downloadable asset. Only AniMarket is featured on the portfolio page. There are no invented project metrics, repository links, social profiles, or external certification verification claims.
+The profile, qualifications, education, contact details, and AniMarket project contributions come from `Rubite_Dwayne_CV.pdf`, supplemented by user corrections. AniMarket is a React Native mobile application built with TypeScript and Firebase, as confirmed by the user; this replaces the Dart and Flutter attribution in the CV. Dart and Flutter remain in the personal skills list. The user also confirmed C#, Supabase, Cloudinary, and API integration as general expertise; these are not attributed to AniMarket without project-specific confirmation.
+
+The portfolio features AniMarket and the [DRMC Patient Portal](https://github.com/DAJabonite/drmc-patient-portal). DRMC technology and capabilities were verified against its README and project file: C#, ASP.NET Core, Entity Framework Core, SQL Server, and Bootstrap. It is presented as a development project, with a source link and no claim of a live hospital integration.
+
+The portrait is the user-supplied `Digoy` PNG, stored as `assets/dwayne-portrait.png`. The AniMarket showcase uses the supplied `assets/animarket-logo.png`. The credentials section displays the supplied `assets/database-certificate.png`, with a full-size link. The certificate's verification code is not manually transcribed from the low-resolution image; view the document for its details. The original PDF is included as a downloadable asset. There are no invented project metrics, social profiles, or external certification verification claims.
 
 The site includes an accessible project detail dialog, skill search and filters, mobile navigation, a FAQ, a downloadable CV and vCard, and an email copy button. The project controller supports category filters when more projects are added. The contact form prepares a mailto draft; it does not store or send inquiries and requires an email application. The page remains readable if JavaScript is disabled. Google Fonts are optional external resources with local font fallbacks.
 
@@ -26,7 +30,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the dependency diagram, SOLID mapping
 
 ## Design references
 
-The information structure takes inspiration from [Aljun Cursiga's developer portfolio](https://aljun-cursiga-portfolio.vercel.app/), inspected in the browser. The design is original, using warm typography, editorial spacing, a portrait arch, and supplied project branding.
+The information structure takes inspiration from [Aljun Cursiga's developer portfolio](https://aljun-cursiga-portfolio.vercel.app/), inspected in the browser. The current design retains the beige, burlywood, deep brown, and muted khaki palette while using bold Barlow Condensed headings, DM Sans body text, angular framing, and stronger borders. The supplied visual reference informed the sharper typography and structured layout; supplied project branding remains in the showcase.
 
 Pinterest directions researched before implementation:
 

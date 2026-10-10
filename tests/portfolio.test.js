@@ -11,7 +11,8 @@ test('project category selection works for current content and future additions'
   const selected = filterProjects(Object.values(projects), 'mobile');
   assert.deepEqual(selected.map(p => p.id), ['animarket']);
   assert.match(selected[0].label, /MOBILE DEVELOPER/);
-  assert.equal(filterProjects(Object.values(projects)).length, 1);
+  assert.equal(filterProjects(Object.values(projects)).length, 2);
+  assert.deepEqual(filterProjects(Object.values(projects), 'web').map(p => p.id), ['drmc']);
   const extended = [...Object.values(projects), { id: 'future-system', category: 'systems' }];
   assert.deepEqual(filterProjects(extended, 'systems').map(p => p.id), ['future-system']);
   assert.deepEqual(filterProjects(Object.values(projects), 'unknown'), []);

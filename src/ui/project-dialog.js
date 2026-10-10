@@ -34,8 +34,16 @@ export function createProjectDialog(dialog, { body, signal }) {
       project.tags.forEach(tag => tags.append(create('span', tag)));
       const list = create('ul');
       project.contributions.forEach(item => list.append(create('li', item)));
-      dialog.querySelector('#dialog-content').replaceChildren(tags,
-        create('h3', 'My contributions'), list, create('p', project.context, 'dialog-context'));
+      const content = [tags, create('h3', project.contributionsHeading || 'My contributions'),
+        list, create('p', project.context, 'dialog-context')];
+      if (project.repositoryUrl) {
+        const source = create('a', 'View source on GitHub ↗', 'button dialog-source');
+        source.href = project.repositoryUrl;
+        source.target = '_blank';
+        source.rel = 'noopener noreferrer';
+        content.push(source);
+      }
+      dialog.querySelector('#dialog-content').replaceChildren(...content);
       dialog.showModal();
       dialog.scrollTop = 0;
       body.classList.add('modal-open');

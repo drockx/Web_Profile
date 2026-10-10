@@ -1,1 +1,13 @@
-:root{--beige:#f4f0e7;--paper:#faf8f2;--burlywood:#deb887;--brown:#49392d;--deep:#30271f;--khaki:#b9b48e;--muted:#776d61;--line:#d9d2c4;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+:root {
+  --beige: #f4f0e7;
+  --paper: #faf8f2;
+  --burlywood: #deb887;
+  --brown: #49392d;
+  --deep: #30271f;
+  --khaki: #b9b48e;
+  --muted: #70665b;
+  --line: #d9d2c4;
+  --accent: #866442;
+  --display: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}

@@ -1,1 +1,32 @@
-@media print{.site-header,.hero-actions,.hero-note,.hero-bottom,.expertise-ribbon,.project-filters,.skill-controls,.project-detail,.contact-section form,.contact-downloads,.back-top,.toast,dialog,.skip-link{display:none!important}body{background:white;color:#30271f;font-size:11px}.container{width:100%}.section{padding-block:25px}h1{font-size:46px}h2{font-size:30px}.hero{padding-top:0;gap:40px;grid-template-columns:1.2fr .8fr}.hero-visual{width:180px;margin:0 auto}.portrait-arch{height:200px}.orbit-star,.vertical-label,.visual-label{display:none}.portrait-caption{display:none}.work-section,.credential-section,.approach-section,.contact-section{background:white;color:#30271f}.credential-layout p,.credential-meta{color:#49392d}.credential-layout h2 em{color:#92704f}.credential-seal{display:none}.credential-layout{grid-template-columns:1fr auto}.project-art{height:240px}.about-layout,.journey-layout{gap:35px}.focus-grid,.project-card,.skill-group,.timeline article,details{break-inside:avoid}.reveal,.js-motion .reveal.pending{opacity:1!important;transform:none!important}.faq{gap:35px}.contact-layout{display:block}.contact-copy h2{font-size:35px}a[href^="mailto:"]{overflow-wrap:anywhere}.footer{padding-block:20px}.portrait-arch img{filter:none}}
+@media print {
+  .site-header, .hero-actions, .hero-note, .hero-bottom, .expertise-ribbon, .skill-controls, .project-detail, .project-repository, .contact-section form, .contact-downloads, .back-top, .toast, dialog, .skip-link { display: none !important; }
+  body { background: white; color: var(--deep); font-size: 11px; }
+  .container { width: 100%; }
+  .section { padding-block: 25px; }
+  h1 { font-size: 46px; }
+  h2 { font-size: 30px; }
+  .hero { padding-top: 0; gap: 40px; grid-template-columns: 1.2fr .8fr; }
+  .hero-visual { width: 180px; margin: 0 auto; padding: 0; }
+  .hero-visual::before, .portrait-index, .visual-label, .portrait-caption { display: none; }
+  .portrait-frame { height: 220px; }
+  .work-section, .credential-section, .approach-section, .contact-section { background: white; color: var(--deep); }
+  .credential-layout p, .credential-meta, .credential-meta span b { color: var(--brown); }
+  .credential-layout h2 em { color: var(--accent); }
+  .credential-layout { grid-template-columns: 220px 1fr; }
+  .project-card { grid-template-columns: 1fr 1fr; gap: 30px; padding-bottom: 25px; }
+  .project-art { height: 310px; }
+  .animarket-logo { width: 240px; height: 240px; }
+  .drmc-art { padding-top: 48px; }
+  .portal-title { font-size: 60px; }
+  .portal-workflows { margin-top: 12px; }
+  .project-info h3 { font-size: 30px; }
+  .about-layout, .journey-layout { gap: 35px; }
+  .focus-grid, .project-card, .skill-group, .timeline article, details { break-inside: avoid; }
+  .reveal, .js-motion .reveal.pending { opacity: 1 !important; transform: none !important; }
+  .faq { gap: 35px; }
+  .contact-layout { display: block; }
+  .contact-copy h2 { font-size: 35px; }
+  a[href^="mailto:"] { overflow-wrap: anywhere; }
+  .footer { padding-block: 20px; }
+  .portrait-frame img { filter: none; }
+}
